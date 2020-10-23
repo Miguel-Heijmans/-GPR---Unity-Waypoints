@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float Health;
+    public float EnemyHealth;
     public void TakeDamage()
     {
         print("I'm here");
+        Health -= 10;
     }
 }
