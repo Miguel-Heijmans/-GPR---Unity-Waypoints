@@ -39,9 +39,14 @@ namespace Opdrachten
             Player = GameObject.FindGameObjectWithTag("Player");
             PlayerHealth = Player.GetComponent<PlayerHealth>();
 
+            
+            
             PlayerHealth.TakeDamage();
-            Debug.Log("Ping");
+            
+            
         }
+        
+
 
         private void Update()
         {
@@ -52,6 +57,7 @@ namespace Opdrachten
 
             if (distance <= _arrivalThreshold)
             {
+                
                 if (WaypointCounter == Waypoint.Length-1)
                 {
                     m_MyEvent.Invoke();
@@ -60,12 +66,15 @@ namespace Opdrachten
                 {
                     WaypointCounter++;
                 }
+                
             }
             else
             {
                 transform.LookAt(direction);
                 transform.Translate(Vector3.forward * _speed * Time.deltaTime);
             }
+
+            
         }
         
         
