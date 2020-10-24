@@ -16,13 +16,14 @@ namespace Opdrachten
         [SerializeField] private float _speed;
         [SerializeField] private float _arrivalThreshold = 0.1f;
         private GameObject Player;
+        private GameObject Effect;
         private PlayerHealth PlayerHealth;
         
         private UnityEvent m_MyEvent;
 
         private void Start()
         {
-            
+            Effect.SetActive(false);
 
             if (m_MyEvent == null)
             {
@@ -32,21 +33,24 @@ namespace Opdrachten
             m_MyEvent.AddListener(Ping);
             Spawnlocation = GameObject.FindGameObjectWithTag("Respawn");
             transform.position = Spawnlocation.transform.position;
+
+            
+            PlayerHealth = Player.GetComponent<PlayerHealth>();
+            
         }
 
         void Ping()
         {
-            Player = GameObject.FindGameObjectWithTag("Player");
-            PlayerHealth = Player.GetComponent<PlayerHealth>();
-
-            
-            
-            PlayerHealth.TakeDamage();
-            
-            
+            PlayerHealth.TakeDamage();   
+            Effect.SetActive(true);
         }
         
-
+        private void Awake() 
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+            //Effect = GameObject.FindGameObjectWithTag("Effect");
+            Effect = GameObject.FindGameObjectWithTag("Effect");   
+        }
 
         private void Update()
         {

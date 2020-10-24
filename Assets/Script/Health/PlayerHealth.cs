@@ -39,11 +39,6 @@ public class PlayerHealth : HealthMain
         healthBarSlider.value = playerHp;
         healthText.text = healthBarSlider.value.ToString() + " / " + healthBarSlider.maxValue.ToString();
         
-        
-        
-
-        
-            
             
         
     }
