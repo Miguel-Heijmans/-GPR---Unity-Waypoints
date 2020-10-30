@@ -24,7 +24,7 @@ public class PlayerHealth : HealthMain
 
     public Text healthText;
 
-    bool damage;
+    // bool damage;
 
     // Update is called once per frame
     void Update()
@@ -45,7 +45,7 @@ public class PlayerHealth : HealthMain
 
         public void TakeDamage()
             {
-                print("I'm here");
+                // print("I'm here");
                 playerHp -= 1;
             }
 
