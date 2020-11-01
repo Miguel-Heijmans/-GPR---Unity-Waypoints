@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3715886719912723726}
   - component: {fileID: 3208537879465356505}
   - component: {fileID: 1232167255880199055}
+  - component: {fileID: 3068094654550838447}
+  - component: {fileID: 8135652291164929009}
   m_Layer: 0
   m_Name: SingleTargetTower
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2830166840951959023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.63903, y: -1.55, z: 14.681402}
+  m_LocalPosition: {x: -6.0731463, y: -1.55, z: 6.8253193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,3 +83,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3068094654550838447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830166840951959023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f563f4f4e642743bd8c6a376f508ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 0
+  _layer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &8135652291164929009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830166840951959023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3292b58278326c4eba29b9de105fd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
